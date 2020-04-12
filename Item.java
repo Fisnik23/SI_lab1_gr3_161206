@@ -52,3 +52,28 @@ class Item {
         return price * 0.15;
     }
 }
+
+class Receipt{
+	List<Item> items;
+
+	class Receipt(){
+		this.items = new ArrayList<Item>();
+	}
+
+	public void dodadiItem(Item item){
+		items.add(item);
+	}
+	public void brisiItem(Item item){
+		items.remove(item);
+	}
+	public double vkupenIznos(){
+		int sum=0;
+		for(int i=0;i<items.size();i++){
+			sum+=items.get(i).price;
+		}
+		return sum;
+	}
+	public void DDVPovrat(Item item){
+		return item.taxReturn();
+	}
+}
