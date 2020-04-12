@@ -2,7 +2,7 @@ class Item {
 	int id;
 	String name;
 	double price;
-
+	char c;
 	//TODO add variable.
 
 	//TODO constructor
